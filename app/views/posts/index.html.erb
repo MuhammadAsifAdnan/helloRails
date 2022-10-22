@@ -2,6 +2,16 @@
 
 <h1>Posts</h1>
 
+<section>
+  <% @posts.each do |post| %>
+    <h3><%= post.title %></h3><br/>
+    <small><%= post.category %></small><small>, published at <%= post.created_at %> </small> <br/>
+    <small><b><%= post.author %></b></small><br/>
+    <%= image_tag post.image_url %><br/>
+    <p><%= post.content %></p><br/>
+  <% end %>
+</section>
+
 <table>
   <thead>
     <tr>
